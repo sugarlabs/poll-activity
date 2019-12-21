@@ -31,7 +31,7 @@ from gi.repository import GdkPixbuf
 from hashlib import sha1
 
 from dbus.service import method, signal
-from dbus.gobject_service import ExportedGObject
+from dbus.gi_service import ExportedGObject
 
 SERVICE = "org.worldwideworkshop.olpc.PollBuilder"
 IFACE = SERVICE
