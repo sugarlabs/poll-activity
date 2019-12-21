@@ -111,7 +111,7 @@ class Poll():
 
         total = 0
 
-        for choice in self.options.keys():
+        for choice in list(self.options.keys()):
             total += self.data[choice]
 
         return total
@@ -192,7 +192,7 @@ class Poll():
         if self.activity.poll_session:
             images_buf = {}
 
-            for img_number, img_pixbuf in self.images.iteritems():
+            for img_number, img_pixbuf in self.images.items():
                 if not img_pixbuf == '':
                     images_buf[img_number] = self.get_buffer(img_pixbuf)
 
@@ -352,7 +352,7 @@ class PollSession(ExportedGObject):
             # images_properties = poll.simplify_images_dictionary()
             images_buf = {}
 
-            for img_number, img_pixbuf in poll.images.iteritems():
+            for img_number, img_pixbuf in poll.images.items():
                 if not img_pixbuf == '':
                     images_buf[img_number] = poll.get_buffer(img_pixbuf)
 
@@ -397,7 +397,7 @@ class PollSession(ExportedGObject):
 
             images_buf = {}
 
-            for img_number, img_pixbuf in poll.images.iteritems():
+            for img_number, img_pixbuf in poll.images.items():
                 if not img_pixbuf == '':
                     images_buf[img_number] = poll.get_buffer(img_pixbuf)
 
@@ -577,7 +577,7 @@ class PollSession(ExportedGObject):
         for poll in self.activity.get_my_polls():
             images_buf = {}
 
-            for img_number, img_pixbuf in poll.images.iteritems():
+            for img_number, img_pixbuf in poll.images.items():
                 if not img_pixbuf == '':
                     images_buf[img_number] = poll.get_buffer(img_pixbuf)
 

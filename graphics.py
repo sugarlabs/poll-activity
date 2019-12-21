@@ -1,7 +1,7 @@
 import cairo
 import math
 from gettext import gettext as _
-import StringIO
+import io
 
 import gi
 gi.require_version('PangoCairo', '1.0')
@@ -129,7 +129,7 @@ class Chart(Gtk.DrawingArea):
         preview_context.paint()
         preview_image_surface.flush()
 
-        preview_str = StringIO.StringIO()
+        preview_str = io.StringIO()
         preview_image_surface.write_to_png(preview_str)
         return preview_str
 

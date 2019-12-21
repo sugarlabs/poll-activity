@@ -32,7 +32,7 @@ from gi.repository import GdkPixbuf
 from gi.repository import TelepathyGLib
 
 import subprocess
-import cPickle
+import pickle
 import json
 import logging
 import tempfile
@@ -153,7 +153,7 @@ class PollBuilder(activity.Activity):
 
         pixbufs = {}
 
-        for index, ds_object_id in images_ds_object_id.iteritems():
+        for index, ds_object_id in images_ds_object_id.items():
             if not ds_object_id == '':
                 image_file_path = datastore.get(ds_object_id).file_path
                 pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
@@ -173,7 +173,7 @@ class PollBuilder(activity.Activity):
 
         images_ds_objects = {}
 
-        for index, ds_object_id in images_ds_object_id.iteritems():
+        for index, ds_object_id in images_ds_object_id.items():
             images_ds_objects[int(index)] = {}
 
             if not ds_object_id == '':
@@ -248,26 +248,26 @@ class PollBuilder(activity.Activity):
         self._polls = set()
 
         f = open(file_path, 'r')
-        num_polls = cPickle.load(f)
-        activity_settings = cPickle.load(f)
+        num_polls = pickle.load(f)
+        activity_settings = pickle.load(f)
         self._view_answer = activity_settings['view_answer']
         self._remember_last_vote = activity_settings['remember_last_vote']
         self._play_vote_sound = activity_settings['play_vote_sound']
         self._use_image = activity_settings['use_image']
-        self._image_size = cPickle.load(f)
+        self._image_size = pickle.load(f)
 
         for p in range(num_polls):
-            title = cPickle.load(f)
-            author = cPickle.load(f)
-            active = cPickle.load(f)
-            createdate_i = cPickle.load(f)
-            maxvoters = cPickle.load(f)
-            question = cPickle.load(f)
-            number_of_options = cPickle.load(f)
-            options = cPickle.load(f)
-            data = cPickle.load(f)
-            votes = cPickle.load(f)
-            images_ds_objects_id = cPickle.load(f)
+            title = pickle.load(f)
+            author = pickle.load(f)
+            active = pickle.load(f)
+            createdate_i = pickle.load(f)
+            maxvoters = pickle.load(f)
+            question = pickle.load(f)
+            number_of_options = pickle.load(f)
+            options = pickle.load(f)
+            data = pickle.load(f)
+            votes = pickle.load(f)
+            images_ds_objects_id = pickle.load(f)
             images = self.__create_pixbufs(images_ds_objects_id)
 
             images_ds_object = self.__get_images_ds_objects(
@@ -388,7 +388,7 @@ class PollBuilder(activity.Activity):
             # FIXME: Cambiar por gst
             subprocess.Popen("aplay extras/vote-sound.wav", shell=True)
 
-        except (OSError, ValueError), e:
+        except (OSError, ValueError) as e:
             logging.exception(e)
 
     def poll_vote(self, vote):

@@ -200,7 +200,7 @@ class NewPollCanvas(Gtk.EventBox):
         self._options_page.pack_start(label, False, False, 0)
 
         self._option_widgets = []
-        for choice in self._poll.options.keys():
+        for choice in list(self._poll.options.keys()):
             item_poll = ItemOptionNewPoll(str(choice + 1), self._poll, choice)
             self._options_page.pack_start(item_poll, False, False, 0)
 
@@ -258,7 +258,7 @@ class NewPollCanvas(Gtk.EventBox):
         second_column.pack_start(label, False, False, 10)
 
         self._option_labels = {}
-        for choice in self._poll.options.keys():
+        for choice in list(self._poll.options.keys()):
             label = Gtk.Label()
             label.set_ellipsize(Pango.EllipsizeMode.END)
             self._option_labels[int(choice)] = label
@@ -321,7 +321,7 @@ class NewPollCanvas(Gtk.EventBox):
             self._maxvoters_label.set_markup(
                 '<span size="x-large" >%s</span>' % str(self._poll.maxvoters))
 
-            for choice in self._poll.options.keys():
+            for choice in list(self._poll.options.keys()):
                 self._option_labels[int(choice)].set_markup(
                     '<span size="x-large" >%s</span>' %
                     GObject.markup_escape_text(
