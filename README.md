@@ -6,7 +6,7 @@ A poll is a research tool that helps explain what a group of people think about 
 How to use?
 ===========
 
-Poll is part of the Sugar desktop.  Please refer to;
+Poll is not part of the Sugar desktop, but is often included.  Please refer to;
 
 * [How to Get Sugar on sugarlabs.org](https://sugarlabs.org/),
 * [How to use Sugar](https://help.sugarlabs.org/),
