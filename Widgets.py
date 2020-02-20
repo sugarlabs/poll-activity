@@ -410,7 +410,7 @@ class BigEntry(Gtk.Entry):
 
     def __init__(self, size=1.25):
         Gtk.Entry.__init__(self)
-        theme = 'GtkEntry {font-size:%s;}' % int(style.FONT_SIZE * size)
+        theme = 'entry {font-size: %fpt;}' % (style.FONT_SIZE * size)
         css_provider = Gtk.CssProvider()
         css_provider.load_from_data(theme.encode())
         style_context = self.get_style_context()
@@ -996,8 +996,8 @@ class PollCanvas(Gtk.EventBox):
             button = Gtk.Button(_("Vote"))
             button.set_image(Icon(icon_name='dialog-ok',
                                   pixel_size=style.MEDIUM_ICON_SIZE))
-            theme = 'GtkButton {background-color: %s;' \
-                'font-size:%s;' \
+            theme = 'button {background-color: %s;' \
+                'font-size:%fpt;' \
                 'padding: 5px 35px 5px 35px;}' % \
                 ('#ff0000', style.FONT_SIZE * 2)
             css_provider = Gtk.CssProvider()
