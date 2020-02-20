@@ -213,7 +213,7 @@ class Chart(Gtk.DrawingArea):
             for data in self._data:
                 description = data['label']
                 # If there is no category, display as Unknown
-                if description is '':
+                if description == '':
                     description = _('Unknown')
                 if len(description) > 30:
                     description = description[:30] + '...'
@@ -239,7 +239,7 @@ class Chart(Gtk.DrawingArea):
             rectangles_width = max_width_desc + max_width_amount + padding * 3
             for data in self._data:
                 description = data['label']
-                if description is '':
+                if description == '':
                     description = _('Unknown')
                 if len(description) > 30:
                     description = description[:30] + '...'
@@ -346,7 +346,7 @@ class Chart(Gtk.DrawingArea):
             for data in self._data:
                 description = data['label']
                 # If there is no category, display as Unknown
-                if description is '':
+                if description == '':
                     description = _('Unknown')
 
                 width, height = self._measure_text(
@@ -360,7 +360,7 @@ class Chart(Gtk.DrawingArea):
             x = margin * 2
             for data in self._data:
                 description = data['label']
-                if description is '':
+                if description == '':
                     description = _('Unknown')
 
                 self._print_text(context, x, y, description, (12 * scale),
