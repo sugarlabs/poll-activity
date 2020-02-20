@@ -412,7 +412,7 @@ class BigEntry(Gtk.Entry):
         Gtk.Entry.__init__(self)
         theme = 'GtkEntry {font-size:%s;}' % int(style.FONT_SIZE * size)
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_data(theme)
+        css_provider.load_from_data(theme.encode())
         style_context = self.get_style_context()
         style_context.add_provider(css_provider,
                                    Gtk.STYLE_PROVIDER_PRIORITY_USER)
@@ -1001,7 +1001,7 @@ class PollCanvas(Gtk.EventBox):
                 'padding: 5px 35px 5px 35px;}' % \
                 ('#ff0000', style.FONT_SIZE * 2)
             css_provider = Gtk.CssProvider()
-            css_provider.load_from_data(theme)
+            css_provider.load_from_data(theme.encode())
             style_context = button.get_style_context()
             style_context.add_provider(css_provider,
                                        Gtk.STYLE_PROVIDER_PRIORITY_USER)
