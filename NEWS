@@ -1,3 +1,13 @@
+33
+
+* Port telepathy static binding to TelepathyGLib (Ibiam Chihurumnaya),
+* Port to Python 3 (Srevin Saju),
+* Fix dbus ExportedGObject (Srevin Saju),
+* Fix README.md for Honey classification (James Cameron),
+* New translations,
+* Remove empty translations,
+* Refresh POT file,
+
 22
 
 * Support new activity.info exec parameter (alsroot)
