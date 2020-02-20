@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-07 14:50+1000\n"
+"POT-Creation-Date: 2020-02-20 13:23+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Image Size: "
 msgstr ""
 
-#: Widgets.py:996 poll.py:634
+#: Widgets.py:996 poll.py:633
 msgid "Vote"
 msgstr ""
 
@@ -150,57 +150,57 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: poll.py:140 poll.py:234
+#: poll.py:139 poll.py:233
 msgid "Create a new poll"
 msgstr ""
 
-#: poll.py:141 poll.py:235
+#: poll.py:140 poll.py:234
 msgid "Create"
 msgstr ""
 
-#: poll.py:366
+#: poll.py:365
 msgid "Delete Poll?"
 msgstr ""
 
-#: poll.py:367
+#: poll.py:366
 #, python-format
 msgid "Do you want delete the poll \"%s\"?"
 msgstr ""
 
-#: poll.py:533
+#: poll.py:532
 msgid "Chart created"
 msgstr ""
 
-#: poll.py:533 poll.py:611
+#: poll.py:532 poll.py:610
 msgid "Open in the Journal"
 msgstr ""
 
-#: poll.py:542
+#: poll.py:541
 msgid "Show in Journal"
 msgstr ""
 
-#: poll.py:545
+#: poll.py:544
 msgid "Ok"
 msgstr ""
 
-#: poll.py:572
+#: poll.py:571
 #, python-format
 msgid "Results from poll \"%s\""
 msgstr ""
 
-#: poll.py:611
+#: poll.py:610
 msgid "Exported data"
 msgstr ""
 
-#: poll.py:635
+#: poll.py:634
 #, python-format
 msgid "Somebody voted on %s"
 msgstr ""
 
-#: poll.py:710 poll.py:745
+#: poll.py:709 poll.py:744
 msgid "Joined"
 msgstr ""
 
-#: poll.py:750
+#: poll.py:749
 msgid "Left"
 msgstr ""
