@@ -35,7 +35,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-09-04 00:33-0400\n"
-"PO-Revision-Date: 2018-08-20 20:42+0000\n"
+"PO-Revision-Date: 2019-03-09 00:59+0000\n"
 "Last-Translator: Paulo Francisco <slomp@ufrgs.br>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt_BR\n"
@@ -44,7 +44,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1534797743.000000\n"
+"X-POOTLE-MTIME: 1552093158.000000\n"
 
 #. TRANS: "name" option from activity.info file
 #. TRANS: "summary" option from activity.info file
@@ -160,7 +160,7 @@ msgstr "VER RESULTADOS"
 
 #: Widgets.py:546
 msgid "DELETE"
-msgstr "APAGAR"
+msgstr "EXCLUIR"
 
 #: Widgets.py:560
 msgid "Introduction"
