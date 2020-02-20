@@ -120,7 +120,7 @@ class PollBuilder(activity.Activity):
         owner = self.pservice.get_owner()
         self.owner = owner
         self.nick = owner.props.nick
-        self.nick_sha1 = sha1(self.nick).hexdigest()
+        self.nick_sha1 = sha1(self.nick.encode()).hexdigest()
 
         toolbar = Toolbar(self)
         toolbar.create_button.connect('clicked', self.__button_new_clicked)

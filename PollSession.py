@@ -124,7 +124,8 @@ class Poll():
         Currently we sha1 the poll title and author.
         """
 
-        return sha1(self.title + self.author).hexdigest()
+        data = self.title + self.author
+        return sha1(data.encode()).hexdigest()
 
     def register_vote(self, choice, votersha):
         """
