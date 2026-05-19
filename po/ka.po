@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-20 13:23+1100\n"
-"PO-Revision-Date: 2026-05-04 07:03+0000\n"
+"PO-Revision-Date: 2026-05-19 11:33+0000\n"
 "Last-Translator: NF <rkavt@smartprojects.ge>\n"
 "Language-Team: Georgian <http://weblate.sugarlabs.org/projects/"
 "sugar-activities/poll-activity/ka/>\n"
@@ -214,3 +214,7 @@ msgstr "გამოსახულების დამატება"
 #: Widgets.py:445
 msgid "Save"
 msgstr "შენახვა"
+
+#: Widgets.py:71 Widgets.py:570
+msgid "Lesson Plans"
+msgstr "გაკვეთილის გეგმები"
